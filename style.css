@@ -212,7 +212,7 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url('../images/sai1.jpeg');
+	background-image: url('images/sai1.jpeg');
 	background-size: cover;
 	background-position: top center;
 	position: relative;
