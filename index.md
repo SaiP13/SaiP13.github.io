@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-  
-  <html lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +7,6 @@
   </head>
 
   <body>
-    
-    <!-- Header -->
     <section id="header">
     <div class="header container">
       <div class="nav-bar">
@@ -30,10 +26,6 @@
       </div>
     </div>
   </section>
-
-    <!-- End Header -->
-
-    <!-- Hero Section  -->
     <section id="hero">
       <section id="hero1">
       <div class="hero container">
@@ -44,9 +36,6 @@
       </div>
       </section>
     </section>
-    <!-- End Hero Section  -->
-    
-    <!-- Footer -->
     <section id="footer">
     <div class="footer container">
       <div class="brand"><h1><span>S </span> a i &nbsp;<span>   P </span>r a v e e n</h1></div>
@@ -65,8 +54,6 @@
       <p>Copyright © 2021. All rights reserved!</p>
     </div>
   </section>
-    <!-- End Footer -->
-    <script src="includes/javascript/jscript.js"></script>
-    
+   <script src="includes/javascript/jscript.js"></script>
   </body>
 </html>
