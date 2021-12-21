@@ -818,13 +818,12 @@ a:hover {
   padding-bottom: 4rem;
 }
 .about-mf .about-img {
-  /* margin-bottom: 2rem; */
   border: 2px solid white;
   box-shadow: 0 0 3px 3px rgba(8, 177, 233, 0.5);
 }
-.about-mf .about-img img {
+/* .about-mf .about-img img {
   margin-left: 10px;
-}
+} */
 
 /* .about-mf .about-img {
 	height: 100%;
@@ -832,9 +831,9 @@ a:hover {
 	position: relative;
 	border: 10px solid white;
 } */
-  .about-mf .about-img:hover {
+  /* .about-mf .about-img:hover {
 	box-shadow: 0 0 4px 3px rgba(212, 15, 48, 0.5);
-}
+} */
 
 @media (min-width: 767px) {
   .about-mf .box-pl2 {
