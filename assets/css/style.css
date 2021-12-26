@@ -703,7 +703,8 @@ a:hover {
 @media only screen and (max-width: 767px) {
   #hero {
     height: 100vh;
-    background-image: url(/images/IMG_20201117_125327.jpg);
+    background-image: url(/assets/img/wed-design.png);
+    /* background-image: url(/images/IMG_20201117_125327.jpg); */
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -851,7 +852,7 @@ a:hover {
 }
 .skill-mf .progress {
   background-color: #cde1f8;
-  margin: 0.5rem 0 1.2rem 0;
+  margin: 0.1rem 0 1.0rem 0;
   border-radius: 0;
   height: 0.7rem;
 }
