@@ -1,13 +1,4 @@
-/**
-* Template Name: DevFolio - v4.7.1
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   background-color: #f5f5f5;
   color: #4e4e4e;
@@ -694,8 +685,8 @@ a:hover {
   height: 100vh;
   /* background-image: linear-gradient(60deg, #000000 0%, #6c0c85 100%); */
   /* background-image: url(/images/sai1.jpeg); */
-  /* background-image: url(/assets/img/wed-design2.png); */
-  background-image: url(assets/img/web-development.png);
+  background-image: url(/assets/img/wed-design2.png);
+  /* background-image: url(assets/img/web-development.png); */
 	background-size: cover;
 	background-position: top center;
 	position: relative;
