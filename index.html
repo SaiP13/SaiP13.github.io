@@ -26,7 +26,18 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
+  <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <style>
+    .swal-overlay {
+      background-color: rgba(99, 105, 105, 0.342);
+    }
+  </style>
 </head>
 
 <body>
@@ -622,7 +633,7 @@
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
-                <a href="blogs/mysql.html"><img src="assets/img/mysql.png" alt="" class="img-fluid"></a>
+                <a href="blogs/mysql.html"><img src="assets/img/mysql2.png" alt="" class="img-fluid"></a>
               </div>
               <div class="card-body">
                 <div class="card-category-box">
@@ -642,7 +653,9 @@
       </div>
     </section>
     <!-- End Blog Section -->
-
+    
+    
+   
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(images/sai1.jpeg)">
       <div class="overlay-mf"></div>
@@ -755,7 +768,25 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>
+    $(document).ready(function(){
+      var pathArray = window.location.pathname.split('/');
+      if(pathArray[1] == undefined){
+        swal({
+          title:"Hello",
+          text : "Welocme To My World",
+          buttons: false,
+          timer: 2000,
+          // imageUrl: "../assets/img/mysql2.png",
+          // imageAlt: "check",
+          // html: "<img src='../images/facebook-new.png' height='50' width='50'/>",
+          // content:true,
+          // html:true,
+        });
+      }
+      
+    });
+  </script>
 </body>
 
 </html>
