@@ -937,7 +937,7 @@ a:hover {
   backface-visibility: hidden;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px #ec0909, 2px 2px 4px #212121;
-  height: 500px;
+  height: auto;
   width: auto;
 }
 .card-blog:hover{
@@ -1179,7 +1179,7 @@ a:hover {
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #0059ff;
+  background-color: #080808;
   border-radius: 4px;
 }
 .card-blog .card-category .category {
@@ -1191,8 +1191,9 @@ a:hover {
   margin-bottom: 0;
 }
 .card-blog .card-title {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-top: 0.6rem;
+  text-transform: uppercase;
 }
 .card-blog .card-description {
   color: #4e4e4e;
