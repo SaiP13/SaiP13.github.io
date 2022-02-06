@@ -39,11 +39,7 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  -->
-  <style>
-    .swal-overlay {
-      background-color: rgba(99, 105, 105, 0.342);
-    }
-  </style>
+
 </head>
 
 <body>
@@ -778,16 +774,12 @@
   <script src="assets/js/main.js"></script>
   <script>
     $(document).ready(function(){
-      
-
-
-
       var pathArray = window.location.pathname.split('/');
-      // if(pathArray[1] == "" || pathArray[1] == undefined || pathArray[1] == null){
-        // toastr["info"]("Welocme To My World! @Sai")
+      if(pathArray[1] == "" || pathArray[1] == undefined || pathArray[1] == null){
+        toastr["info"]("Welcome to my world @Sai")
         Swal.fire({
           // title:"Welcome",
-          text:"W e l c o m e",
+          // text:"W e l c o m e",
           showConfirmButton: false,
           timer: 2000,
           // color: '#716add',
@@ -796,11 +788,11 @@
           // imageHeight: 400,
           imageAlt: 'Custom image',
           backdrop: `
-            rgba(34, 0, 0, 0.2)
+            rgba(0, 0, 0, 0)
             no-repeat
           `
         });
-      // }
+      }
 
       $("#form_submit").click(function(){
 
@@ -810,28 +802,28 @@
           var message = $("#message").val();
           var err_msg = "";
           if(user_name == ""){
-            err_msg += "Your name should be required!\n\n";
+            err_msg += "Your name should be required!<br>";
           } 
           if(user_email == ""){
-            err_msg += "Your Email should be required!\n\n";
+            err_msg += "Your Email should be required!<br>";
           } 
           if(subject == ""){
-            err_msg += "Subject should be required!\n\n";
+            err_msg += "Subject should be required!<br>";
           } 
           if(message == ""){
-            err_msg += "Your Message should be required!\n\n";
+            err_msg += "Your Message should be required!<br>";
           } 
 
           if(err_msg != ""){
-              swal({
+              Swal.fire({
                   title: "failed!",
-                  text: err_msg,
+                  html: err_msg,
                   icon: "warning",
-                  html: true,
+                  // html: true,
               });
           } else {
               
-              swal({
+              Swal.fire({
                   title: "Success!",
                   text: "Thank you for your response!",
                   icon: "success",
