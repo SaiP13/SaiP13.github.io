@@ -29,10 +29,16 @@
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
   <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <!-- toaster alerts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
   <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  
+  <!-- sweet alerts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>  -->
   <style>
     .swal-overlay {
       background-color: rgba(99, 105, 105, 0.342);
@@ -48,7 +54,7 @@
 
       <!-- <h2 class="logo"><a href="index.html" >Sai Praveen</a></h2> -->
       <div class="brand">
-        <a href="index.php"><h1><b><span>S</span>ai <span>P</span>raveen</h1></b></a>
+        <a href="index.html"><h1><b><span>S</span>ai <span>P</span>raveen</h1></b></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -766,25 +772,34 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-borderless/borderless.css" rel="stylesheet">
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
     $(document).ready(function(){
+      
+
+
+
       var pathArray = window.location.pathname.split('/');
       if(pathArray[1] == "" || pathArray[1] == undefined || pathArray[1] == null){
-        // swal({
-        //   title:"Hello",
-        //   text : "Welcome To My World",
-        //   buttons: false,
-        //   timer: 2000,
-        //   imageUrl: "../assets/img/mysql2.png",
-        //   imageAlt: "check",
-        //   html: "<img src='../images/facebook-new.png' height='50' width='50'/>",
-        //   content:true,
-        //   html:true,
-        // });
-       
-        toastr["info"]("Welocme To My World! @Sai")
+        // toastr["info"]("Welocme To My World! @Sai")
+        Swal.fire({
+          // title:"Welcome",
+          text:"Welcome",
+          showConfirmButton: false,
+          timer: 2000,
+          // color: '#716add',
+          imageUrl: 'assets/img/hello.gif',
+          // imageWidth: 400,
+          // imageHeight: 400,
+          imageAlt: 'Custom image',
+          backdrop: `
+            rgba(0,0,0,0)
+            no-repeat
+          `
+        });
       }
 
       $("#form_submit").click(function(){
