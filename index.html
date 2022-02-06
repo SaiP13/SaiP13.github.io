@@ -783,11 +783,11 @@
 
 
       var pathArray = window.location.pathname.split('/');
-      if(pathArray[1] == "" || pathArray[1] == undefined || pathArray[1] == null){
+      // if(pathArray[1] == "" || pathArray[1] == undefined || pathArray[1] == null){
         // toastr["info"]("Welocme To My World! @Sai")
         Swal.fire({
           // title:"Welcome",
-          text:"Welcome",
+          text:"W e l c o m e",
           showConfirmButton: false,
           timer: 2000,
           // color: '#716add',
@@ -796,11 +796,11 @@
           // imageHeight: 400,
           imageAlt: 'Custom image',
           backdrop: `
-            rgba(0,0,0,0)
+            rgba(34, 0, 0, 0.2)
             no-repeat
           `
         });
-      }
+      // }
 
       $("#form_submit").click(function(){
 
