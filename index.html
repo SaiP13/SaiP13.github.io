@@ -672,26 +672,26 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="" method="post" role="form" class="php-email-form">
+                      <div role="form" class="php-email-form">
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name*" required>
+                              <input type="text" name="user_name" class="form-control" id="user_name" placeholder="Your Name*">
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*" required>
+                              <input type="email" class="form-control" name="user_email" id="user_email" placeholder="Your Email*">
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject*" required>
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject*">
                             </div>
                           </div>
                           <div class="col-md-12">
                             <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message*" required></textarea>
+                              <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message*"></textarea>
                             </div>
                           </div>
                           <div class="col-md-12 text-center my-3">
@@ -700,10 +700,10 @@
                             <div class="sent-message">Your message has been sent. Thank you!</div>
                           </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                            <button id="form_submit" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -772,18 +772,57 @@
     $(document).ready(function(){
       var pathArray = window.location.pathname.split('/');
       if(pathArray[1] == "" || pathArray[1] == undefined || pathArray[1] == null){
-        swal({
-          title:"Hello",
-          text : "Welocme To My World",
-          buttons: false,
-          timer: 2000,
-          // imageUrl: "../assets/img/mysql2.png",
-          // imageAlt: "check",
-          // html: "<img src='../images/facebook-new.png' height='50' width='50'/>",
-          // content:true,
-          // html:true,
-        });
+        // swal({
+        //   title:"Hello",
+        //   text : "Welcome To My World",
+        //   buttons: false,
+        //   timer: 2000,
+        //   imageUrl: "../assets/img/mysql2.png",
+        //   imageAlt: "check",
+        //   html: "<img src='../images/facebook-new.png' height='50' width='50'/>",
+        //   content:true,
+        //   html:true,
+        // });
+       
+        toastr["info"]("Welocme To My World! @Sai")
       }
+
+      $("#form_submit").click(function(){
+
+          var user_name = $("#user_name").val();
+          var user_email = $("#user_email").val();
+          var subject = $("#subject").val();
+          var message = $("#message").val();
+          var err_msg = "";
+          if(user_name == ""){
+            err_msg += "Your name should be required!\n\n";
+          } 
+          if(user_email == ""){
+            err_msg += "Your Email should be required!\n\n";
+          } 
+          if(subject == ""){
+            err_msg += "Subject should be required!\n\n";
+          } 
+          if(message == ""){
+            err_msg += "Your Message should be required!\n\n";
+          } 
+
+          if(err_msg != ""){
+              swal({
+                  title: "failed!",
+                  text: err_msg,
+                  icon: "warning",
+                  html: true,
+              });
+          } else {
+              
+              swal({
+                  title: "Success!",
+                  text: "Thank you for your response!",
+                  icon: "success",
+              });
+          }
+      });
       
     });
   </script>
