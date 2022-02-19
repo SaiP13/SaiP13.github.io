@@ -425,7 +425,8 @@ a:hover {
   z-index: 997;
   padding: 15px 0;
   background: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 1px 15px 0 rgba(241, 8, 8, 0.32);
+  box-shadow: 0 1px 10px 0 rgba(175, 25, 25, 0.712); 
+  
 }
 #header .logo {
   font-size: 28px;
@@ -701,6 +702,9 @@ a:hover {
     background-size: cover;
     background-position: top center;
     position: relative;
+  }
+  #sidemenu-context{
+    display: block;
   }
 }
 
@@ -1440,5 +1444,9 @@ footer .credits a {
 
 .multicolor:after {
   filter: blur(50px);
+}
+/* context menu */
+.cont-menu:hover{
+  color: #0000ff !important;
 }
 
