@@ -499,7 +499,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(36, 240, 9);
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 600;
   padding: 0;
@@ -526,12 +526,12 @@ a:hover {
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
 }
-.navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+/* .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
   visibility: visible;
-  width: 80%;
-}
+  width: 100%;
+} */
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #fff;
+  color: rgb(102, 238, 11);
 }
 .navbar .dropdown ul {
   display: block;
@@ -925,7 +925,7 @@ a:hover {
 .counter-ico .ico-circle {
   height: 60px;
   width: 60px;
-  line-height: 1.5;
+  line-height: 1.8;
   box-shadow: 0 0 0 10px #cde1f8;
 }
 
@@ -1450,3 +1450,12 @@ footer .credits a {
   color: #0000ff !important;
 }
 
+.github-icon {
+  width: 26px;
+  height: 25px;
+  background-image: url(/assets/img/github.svg);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -3px;
+}

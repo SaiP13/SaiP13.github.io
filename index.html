@@ -48,19 +48,21 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <!-- <h2 class="logo"><a href="index.html" >Sai Praveen</a></h2> -->
+      <!-- <h2 class="logo"><img src="images/saipraveen.png"></h2> -->
       <div class="brand shake">
         <a href="index.html"><h1><b><span>S</span>ai <span>P</span>raveen</h1></b></a>
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#work">Projects</a></li>
-          <li><a class="nav-link scrollto " href="#blog">Blog</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto shake active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto shake" href="#about">About</a></li>
+          <li><a class="nav-link scrollto shake" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto shake" href="#work">Projects</a></li>
+          <li><a class="nav-link scrollto shake" href="#blog">Blog</a></li>
+          <li><a class="nav-link scrollto shake" href="#contact">Contact</a></li> 
+          <li><a class="nav-link shake" href="https://github.com/SaiP13" target="_blank"><i class="bi bi-github" style='font-size:24px;'></i></a></li>
+          <!-- <li><a class="nav-link" href=""><img src="assets/img/github.svg" style="position: relative;color: green;"> </a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -76,7 +78,7 @@
     <div class="hero-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="hero-title mb-2 neon">Sai Praveen</h2>
+          <!-- <h2 class="hero-title mb-2 neon">Sai Praveen</h2> -->
           <!-- <p class="hero-subtitle">Web Developer</p> -->
           <a href="#about" type="button" class="cta">Web Developer</a>
         </div>
@@ -688,21 +690,25 @@
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
                               <input type="text" name="user_name" class="form-control" id="user_name" placeholder="Your Name*">
+                              <div class="invalid-feedback">User Name should not be empty!</div>
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
                               <input type="email" class="form-control" name="user_email" id="user_email" placeholder="Your Email*">
+                              <div class="invalid-feedback">Email should not be empty!</div>
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
                               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject*">
+                              <div class="invalid-feedback">Subject should not be empty!</div>
                             </div>
                           </div>
                           <div class="col-md-12">
                             <div class="form-group">
                               <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message*"></textarea>
+                              <div class="invalid-feedback">Message should not be empty!</div>
                             </div>
                           </div>
                           <div class="col-md-12 text-center my-3">
@@ -809,29 +815,37 @@
           var user_email = $("#user_email").val();
           var subject = $("#subject").val();
           var message = $("#message").val();
-          var err_msg = "";
+          var err_msg = false;
           if(user_name == ""){
-            err_msg += "Your name should be required!<br>";
-          } 
-          if(user_email == ""){
-            err_msg += "Your Email should be required!<br>";
-          } 
-          if(subject == ""){
-            err_msg += "Subject should be required!<br>";
-          } 
-          if(message == ""){
-            err_msg += "Your Message should be required!<br>";
-          } 
-
-          if(err_msg != ""){
-              Swal.fire({
-                  title: "failed!",
-                  html: err_msg,
-                  icon: "warning",
-                  // html: true,
-              });
+            $("#user_name").addClass('is-invalid');
+            err_msg = true;
           } else {
-              
+            $("#user_name").removeClass('is-invalid');
+            err_msg = false;
+          }
+          if(user_email == ""){
+            $("#user_email").addClass('is-invalid');
+            err_msg = true;
+          } else {
+            $("#user_email").removeClass('is-invalid');
+            err_msg = false;
+          }
+          if(subject == ""){
+            $("#subject").addClass('is-invalid');
+            err_msg = true;
+          } else {
+            $("#subject").removeClass('is-invalid');
+            err_msg = false;
+          }
+          if(message == ""){
+            $("#message").addClass('is-invalid');
+            err_msg = true;
+          } else {
+            $("#message").removeClass('is-invalid');
+            err_msg = false;
+          }
+
+          if(err_msg == false){
               Swal.fire({
                   title: "Success!",
                   text: "Thank you for your response!",
