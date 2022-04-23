@@ -76,6 +76,9 @@ a:hover {
   background-size: cover;
   background-position: center center;
 }
+.side-menu{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 @media (max-width: 1024px) {
   .bg-image {
     background-attachment: scroll;
@@ -208,7 +211,7 @@ a:hover {
   border-radius: 50%;
   line-height: 1.6;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #f50909;
+  box-shadow: 0 0 0 3px #d3d3d3;
   transition: all 500ms ease;
 }
 .socials .ico-circle:hover {
@@ -227,6 +230,7 @@ a:hover {
 
 .list-ico {
   line-height: 2;
+  font-size: 20px;
 }
 .list-ico span {
   color: #0078ff;
@@ -440,7 +444,7 @@ a:hover {
 }
 #header .logo img {
   max-height: 65px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
@@ -713,6 +717,25 @@ a:hover {
   }
   #sidemenu-context{
     display: block;
+  }
+  #header .logo img {
+    max-height: 50px;
+    margin-left: -5px;
+  }
+  .side-menu{
+    display: none;
+  }
+  .page-content h1 {
+    padding-top: 50px;
+    border-bottom: 1px solid rgb(83 161 58 / 61%);
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+  }
+  .page-content h2, .page-content h3 {
+    font-size: 20px;
+    margin-top: -90px;
+    padding-top: 100px;
+    margin-bottom: 10px;
   }
 }
 
