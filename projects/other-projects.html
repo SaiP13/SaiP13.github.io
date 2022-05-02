@@ -120,8 +120,10 @@
 
                             <div class="hidden lg:block">
                                 <a href="https://apptest.pw/saipraveen/" target="_blank"
-                                    class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-gray-300 rounded-full py-2 px-8">View
+                                    class="transition-colors duration-300 text-xs font-semibold bg-blue-200 hover:bg-gray-300 rounded-full py-2 px-8">View
                                     Site</a>
+                                    <a href="../index.html" class="transition-colors duration-300 text-xs font-semibold bg-red-200 hover:bg-gray-300 rounded-full py-2 px-8"> Back</a>
+
                             </div>
                         </div>
                     </div>
@@ -184,14 +186,20 @@
             toastr["info"]("Other Projects")
             $("#submit").click(function(){
                 var email = $("#email_add").val();
+                var regex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
                 if(email == ""){
                     swal({
                         title: "Failed!",
                         text: "Enter Your Email Address",
                         icon: "warning",
                     });
-                } else {
-                    
+                } else if(!regex.test(email)){
+                    swal({
+                        title: "Failed!",
+                        text: "Invalid Email Address",
+                        icon: "warning",
+                    });
+                } else { 
                     swal({
                         title: "Success!",
                         text: "Thank You for Subscribing!",
