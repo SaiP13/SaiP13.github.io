@@ -195,12 +195,16 @@ a:hover {
   .box-shadow-full {
     padding: 3rem;
   }
+  .gg {
+    padding: 4.5rem 110px !important;
+  }
 }
 
 /*------/ Socials /------*/
 .socials {
   padding: 1.5rem 0;
 }
+
 .socials ul li {
   display: inline-block;
 }
@@ -904,7 +908,7 @@ a:hover {
   margin-bottom: 3rem;
   text-align: center;
   
-  height: 360px;
+  height: 310px;
   box-shadow: 0px 0px 10px #cd08e7, 2px 2px 4px #212121;
 }
 .service-box:hover {
@@ -917,7 +921,8 @@ a:hover {
   box-shadow: 0 0 0 10px #cde1f8;
 }
 .service-box .service-ico {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  margin-top: -1rem;
   color: #1e1e1e;
 }
 .service-box .ico-circle {
@@ -1020,7 +1025,7 @@ a:hover {
 }
 
 .work-content {
-  padding: 2rem 3% 1rem 4%;
+  padding: 1rem 5% 1rem 4%; 
   background-color: rgb(233, 227, 227);
 }
 .work-content .w-more {
@@ -1205,6 +1210,7 @@ a:hover {
 }
 .card-blog .card-body {
   position: relative;
+  padding: 2px;
 }
 .card-blog .card-category-box {
   position: absolute;
@@ -1233,7 +1239,7 @@ a:hover {
 }
 .card-blog .card-title {
   font-size: 1rem;
-  margin-top: 0.6rem;
+  margin-top: 20px;
   text-transform: uppercase;
 }
 .card-blog .card-description {
@@ -1501,4 +1507,6 @@ footer .credits a {
   position: relative;
   top: -3px;
 }
-
+.ss{
+  padding: 0rem 7rem;
+}
