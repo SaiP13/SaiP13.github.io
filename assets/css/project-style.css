@@ -582,7 +582,7 @@ ul {
   float: left;
   padding-left: 20px;
   position: fixed;
-  top: 88px;
+  top: 35px;
 }
 
 .side-menu .title {
@@ -590,7 +590,7 @@ ul {
   color: rgba(0,0,0,0.63);
   font-weight: 600;
   margin-top: 50px;
-  margin-bottom: 36px;
+  /* margin-bottom: 36px; */
 }
 .side-menu a {
   font-size: 17px;
@@ -619,7 +619,7 @@ ul {
   }
 }
 .page-content h1 {
-  padding-top: 90px;
+  padding-top: 65px;
   border-bottom: 1px solid rgba(0,0,0,0.15);
   padding-bottom: 20px;
   margin-bottom: 0;

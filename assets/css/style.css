@@ -198,6 +198,9 @@ a:hover {
   .gg {
     padding: 4.5rem 110px !important;
   }
+  .ss{
+    padding: 0rem 7rem !important;
+  }
 }
 
 /*------/ Socials /------*/
@@ -1507,6 +1510,4 @@ footer .credits a {
   position: relative;
   top: -3px;
 }
-.ss{
-  padding: 0rem 7rem;
-}
+
