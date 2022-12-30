@@ -467,10 +467,11 @@ a:hover {
 	color: rgb(115, 248, 7);
 }
 .brand h4 {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	text-transform: uppercase;
 	color: white;
   margin-top: 6px;
+  letter-spacing: 10px;
 }
 .brand h4 span {
 	color: rgb(103, 255, 2);
@@ -713,6 +714,7 @@ a:hover {
 	background-position: top center;
 	position: relative;
 }
+/* mobile css */
 @media only screen and (max-width: 767px) {
   #hero {
     height: 100vh;
@@ -748,6 +750,9 @@ a:hover {
   #email_add {
     margin-bottom: 10px;
     margin-top: -40px;
+  }
+  .row.ss {
+      padding: 0rem 26px;
   }
 }
 
@@ -898,7 +903,7 @@ a:hover {
 }
 .skill-mf .progress .progress-bar {
   height: 0.7rem;
-  background-color: #0078ff;
+  background-color: #00cf40;
 }
 
 /*--------------------------------------------------------------
