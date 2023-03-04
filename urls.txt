@@ -1,0 +1,16 @@
+https://saipraveen.in/
+https://saipraveen.in/projects/html-css-projects.html
+https://saipraveen.in/projects/php-projects.html
+https://saipraveen.in/projects/laravel-projects.html
+https://saipraveen.in/projects/codeigniter-projects.html
+https://saipraveen.in/projects/python-projects.html
+https://saipraveen.in/projects/other-projects.html
+https://saipraveen.in/blogs/html-css.html
+https://saipraveen.in/blogs/jquery-ajax.html
+https://saipraveen.in/blogs/php.html
+https://saipraveen.in/blogs/laravel.html
+https://saipraveen.in/blogs/codeigniter.html
+https://saipraveen.in/blogs/python.html
+https://saipraveen.in/blogs/flask.html
+https://saipraveen.in/blogs/mysql.html
+https://saipraveen.in/index.html
