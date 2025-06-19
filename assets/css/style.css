@@ -499,6 +499,7 @@ a:hover {
 .navbar {
   padding: 0;
   margin-right: 130px;
+  position: relative;
 }
 .navbar ul {
   margin: 0;
@@ -621,10 +622,21 @@ a:hover {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    position: absolute;
+    /* top: 15px; */
+    right: 15px;
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 1001;
   }
 
   .navbar ul {
     display: none;
+  }
+
+  .navbar {
+    margin-right: 0;
   }
 }
 .navbar-mobile {
@@ -662,12 +674,10 @@ a:hover {
   visibility: hidden;
 }
 .navbar-mobile a, .navbar-mobile a:focus {
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 15px;
+  color: #6c0c85;
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #6c0c85;
+  color: #4a085c;
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
