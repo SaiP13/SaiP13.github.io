@@ -104,109 +104,119 @@ layout: default
 
       <nav class="side-menu">
         <h6 class="title"> CodeIgniter Menu </h6>
-        <a class="shake" href="#Overview"> Overview </a>
+        <a class="shake" href="#overview"> Overview </a>
+        <a class="shake" href="#features"> Features </a>
         <a class="shake" href="#installation"> Installation </a>
-        <a class="shake" href="#advanced-examples"> MVC Arch </a>
-        <a class="shake" href="#using-with-libraries"> Routing <Title></Title>
-        </a>
-        <a class="shake" href="#upgrading-from-1x"> Controllers </a>
-        <a class="shake" href="#upgrading-from-1x"> Models </a>
-        <a class="shake" href="#upgrading-from-1x"> Views </a>
-        <a class="shake" href="#upgrading-from-1x"> Sessions & Cookies </a>
-        <a class="shake" href="#upgrading-from-1x"> Helpers </a>
-        <a class="shake" href="#upgrading-from-1x"> Error Handling </a>
-        <a class="shake" href="#upgrading-from-1x"> File Handling </a>
-        <a class="shake" href="#upgrading-from-1x"> Mail </a>
-        <a class="shake" href="#upgrading-from-1x"> Database </a>
-        <a class="shake" href="#upgrading-from-1x"> Hooks </a>
-
+        <a class="shake" href="#mvc"> MVC Architecture </a>
+        <a class="shake" href="#routing"> Routing </a>
+        <a class="shake" href="#controllers"> Controllers </a>
+        <a class="shake" href="#models"> Models </a>
+        <a class="shake" href="#views"> Views </a>
+        <a class="shake" href="#sessions"> Sessions & Cookies </a>
+        <a class="shake" href="#helpers"> Helpers </a>
+        <a class="shake" href="#error-handling"> Error Handling </a>
+        <a class="shake" href="#file-handling"> File Handling </a>
+        <a class="shake" href="#mail"> Mail </a>
+        <a class="shake" href="#database"> Database </a>
+        <a class="shake" href="#hooks"> Hooks </a>
       </nav>
 
       <div class="page-content">
-        <!--
-layout: guides
--->
-        <h1 id="code" class="deep-link"><a href="#code">CodeIgniter</a></h1>
-        <h2 id="Overview" class="deep-link"><a href="#Overview">Overview</a></h2>
-        <p>
-          CodeIgniter is an application development framework, which can be used
-          to develop websites, using PHP. It is an Open Source framework. It has
-          a very rich set of functionality, which will increase the speed of
-          website development work.
+        <h1 id="overview" class="deep-link"><a href="#overview">Overview</a></h1>
+        <p>CodeIgniter is a powerful PHP framework with a small footprint, built for developers who need a simple and elegant toolkit to create full-featured web applications.</p>
 
-        </p>
+        <h2 id="features" class="deep-link"><a href="#features">Key Features</a></h2>
+        <ul>
+          <li>Lightweight and fast</li>
+          <li>MVC architecture</li>
+          <li>Clear documentation</li>
+          <li>Built-in libraries and helpers</li>
+          <li>Security and XSS filtering</li>
+          <li>Easy error handling</li>
+        </ul>
 
-        <div class="highlight bash">
-          <pre class="editor editor-colors"><div class="line"><span class="text plain null-grammar"><a href="https://www.codeigniter.com">https://www.codeigniter.com</a></span></div></pre>
-        </div>
         <h2 id="installation" class="deep-link"><a href="#installation">Installation</a></h2>
-        <p>
-          The source code for the CodeIgniter Framework is available on the
-          official CodeIgniter website. If you want to download the latest
-          version of the framework, then you should do it from the official web
-          page.
-
-        </p>
-
-        <p>Then, simply unzip the downloaded file</p>
-        <div class="space"></div>
-
-        <div class="highlight javascript">
-          <pre
-            class="editor editor-colors"><a class="line" href="https://www.codeigniter.com/download">https://www.codeigniter.com/download</a></pre>
+        <p>Download CodeIgniter from the official website and extract it to your web server directory. Or use Composer:</p>
+        <div class="highlight bash">
+          <pre><div class="line">composer create-project codeigniter4/appstarter project-root</div></pre>
         </div>
-        <div class="space"></div>
 
-        <p> 1. Unzip the package.</p>
-        <p> 2. Upload the CodeIgniter folders and files to your server. Normally
-          the <code> index.php </code> file will be at your root.</p>
-        <p> 3. Open the <code> application/config/config.php </code> file with a
-          text editor and set your base URL.</p>
-        <p> 4. If you intend to use a database, open the <code>
-            application/config/database.php </code> file with a text editor and
-          set your database settings.</p>
-        <div class="space"></div>
+        <h2 id="mvc" class="deep-link"><a href="#mvc">MVC Architecture</a></h2>
+        <p>CodeIgniter uses the Model-View-Controller (MVC) pattern to separate application logic from presentation.</p>
+        <ul>
+          <li><strong>Model:</strong> Handles data and database logic.</li>
+          <li><strong>View:</strong> Displays data to the user.</li>
+          <li><strong>Controller:</strong> Processes input and updates models/views.</li>
+        </ul>
 
-        <img src="../images/appflow.gif">
+        <h2 id="routing" class="deep-link"><a href="#routing">Routing</a></h2>
+        <p>Routes define how URLs map to controllers. Configure routes in <code>app/Config/Routes.php</code>:</p>
+        <div class="highlight php">
+          <pre><div class="line">$routes->get('/', 'Home::index');</div></pre>
+        </div>
 
+        <h2 id="controllers" class="deep-link"><a href="#controllers">Controllers</a></h2>
+        <p>Controllers handle requests and return responses. Example:</p>
+        <div class="highlight php">
+          <pre><div class="line">class Home extends BaseController {</div>
+<div class="line">  public function index() {</div>
+<div class="line">    return view('welcome_message');</div>
+<div class="line">  }</div>
+<div class="line">}</div></pre>
+        </div>
 
-        <h1 id="getting-started" class="deep-link"><a href="#getting-started">Getting
-            started</a></h1>
-        <h2 id="showing-an-alert" class="deep-link"><a href="#showing-an-alert">With
-            CodeIgniter</a></h2>
+        <h2 id="models" class="deep-link"><a href="#models">Models</a></h2>
+        <p>Models interact with the database. Example:</p>
+        <div class="highlight php">
+          <pre><div class="line">class UserModel extends Model {</div>
+<div class="line">  protected $table = 'users';</div>
+<div class="line">}</div></pre>
+        </div>
 
-        <p>
-          Any software application requires some effort to learn. We’ve done our
-          best to minimize the learning curve while making the process as
-          enjoyable as possible.
-        </p> <p>
-          The first step is to install CodeIgniter, then read all the topics in
-          the Introduction section of the Table of Contents.
-        </p> <p>
-          Next, read each of the General Topics pages in order. Each topic
-          builds on the previous one, and includes code examples that you are
-          encouraged to try.
-        </p><p>
-          Once you understand the basics you’ll be ready to explore the Class
-          Reference and Helper Reference pages to learn to utilize the native
-          libraries and helper files.
+        <h2 id="views" class="deep-link"><a href="#views">Views</a></h2>
+        <p>Views display data to the user. Example:</p>
+        <div class="highlight php">
+          <pre><div class="line">echo view('welcome_message');</div></pre>
+        </div>
 
-          Feel free to take advantage of our Community Forums if you have
-          questions or problems, and our Wiki to see code examples posted by
-          other users.
-        </p>
-        <div class="space"></div>
+        <h2 id="sessions" class="deep-link"><a href="#sessions">Sessions & Cookies</a></h2>
+        <p>Manage user sessions and cookies easily:</p>
+        <div class="highlight php">
+          <pre><div class="line">$session = session();</div>
+<div class="line">$session->set('user_id', 1);</div></pre>
+        </div>
 
+        <h2 id="helpers" class="deep-link"><a href="#helpers">Helpers</a></h2>
+        <p>Helpers are utility functions for common tasks. Load a helper:</p>
+        <div class="highlight php">
+          <pre><div class="line">helper('url');</div></pre>
+        </div>
 
+        <h2 id="error-handling" class="deep-link"><a href="#error-handling">Error Handling</a></h2>
+        <p>CodeIgniter provides error logging and custom error pages.</p>
 
+        <h2 id="file-handling" class="deep-link"><a href="#file-handling">File Handling</a></h2>
+        <p>Upload and manage files using built-in libraries.</p>
 
-        <br><br>
-        <center><strong style="color: red;">Remining Update Soon..</strong>
-        </center>
-        <br>
+        <h2 id="mail" class="deep-link"><a href="#mail">Mail</a></h2>
+        <p>Send emails using the Email library.</p>
+        <div class="highlight php">
+          <pre><div class="line">$email = \Config\Services::email();</div>
+<div class="line">$email->setTo('user@example.com');</div>
+<div class="line">$email->setSubject('Subject');</div>
+<div class="line">$email->setMessage('Message');</div>
+<div class="line">$email->send();</div></pre>
+        </div>
 
+        <h2 id="database" class="deep-link"><a href="#database">Database</a></h2>
+        <p>Interact with databases using the Query Builder or raw SQL.</p>
+        <div class="highlight php">
+          <pre><div class="line">$db = \Config\Database::connect();</div>
+<div class="line">$query = $db->query('SELECT * FROM users');</div></pre>
+        </div>
 
-
+        <h2 id="hooks" class="deep-link"><a href="#hooks">Hooks</a></h2>
+        <p>Hooks allow you to execute scripts at specific points in the application lifecycle.</p>
       </div>
 
     </div>
