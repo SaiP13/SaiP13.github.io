@@ -438,20 +438,23 @@ a:hover {
   /* box-shadow: 0 1px 10px 0 rgba(163, 50, 197, 0.712);  */
   
 }
-#header .logo {
+/* #header .logo {
   font-size: 28px;
   margin: 0;
   padding: 0;
   font-weight: 600;
   letter-spacing: 1px;
-}
-#header .logo a {
+} */
+/* #header .logo a {
   color: #6c0c85;
-}
+} */
+
 #header .logo img {
-  max-height: 65px;
+  max-height: 80px;
   margin-left: 100px;
+  width: 90%;
 }
+
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
   /* padding: 12px 0; */
@@ -737,8 +740,9 @@ a:hover {
     display: block;
   }
   #header .logo img {
-    max-height: 50px;
-    margin-left: -5px;
+    max-height: 70px;
+    margin-left: 5px;
+    width: 100%;
   }
   .side-menu{
     display: none;
