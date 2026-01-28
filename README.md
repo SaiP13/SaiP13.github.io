@@ -1,3 +1,3 @@
 ## Sai Praveen
 
-https://saipraveen.in
+https://saip13.github.io/
